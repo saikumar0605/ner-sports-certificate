@@ -1,10 +1,4 @@
-import os
-from datetime import datetime
-
-
-TIMESTAMP: str = datetime.now().strftime("%m_%d_%Y_%H_%M_%S")
-
-ARTIFACTS_DIR = os.path.join("artifacts", TIMESTAMP)
+ARTIFACTS_DIR = "artifacts"
 LOGS_DIR = 'logs'
 LOGS_FILE_NAME = 'ner.log'
 
@@ -18,3 +12,11 @@ SPACY_TRAIN_DATA_FORMAT_NAME = "train_data.spacy"
 SPACY_TEST_DATA_FORMAT_NAME = "test_data.spacy"
 
 MODEL_TRAINER_ARTIFACTS_DIR = "ModelTrainerArtifacts"
+CONFIG_FILE_NAME = "config.cfg"
+CONFIG_FILE_DIR = "config"
+
+BEST_MODEL_DIR = "model-best"
+
+
+APP_HOST = "0.0.0.0"
+PORT = 8080

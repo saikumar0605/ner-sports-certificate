@@ -9,7 +9,7 @@ from src.constant import *
 from src.exception import NerException
 from src.entity.config_entity import DataTransformationConfig
 from src.entity.artifacts_entity import DataTransformationArtifacts
-from src.components.utils.main_utils import MainUtils
+from src.utils.main_utils import MainUtils
 
 
 # initiatlizing logger
@@ -17,9 +17,9 @@ logger = logging.getLogger(__name__)
 
 
 class DataTransformation:
-    def __init__(self, data_transformation_config: DataTransformationConfig, utils: MainUtils) -> None:
+    def __init__(self, data_transformation_config: DataTransformationConfig) -> None:
         self.data_transformation_config = data_transformation_config
-        self.utils = utils
+        self.utils = MainUtils()
 
 
     def create_spacy_format_data(self, data: json, docbin_obj: object, output_file_path: str, nlp_model: object):
@@ -50,7 +50,7 @@ class DataTransformation:
             raise NerException(e, sys) from e
 
 
-    def initiate_model_transformation(self) -> DataTransformationArtifacts:
+    def initiate_data_transformation(self) -> DataTransformationArtifacts:
         try:
             logger.info(
                 "Entered the initiate_model_transformation method of Model transformation class"
