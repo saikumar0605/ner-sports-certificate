@@ -9,6 +9,8 @@ __pycache__/
 
 demo.py
 artifacts
+model-best
+model-last
 # Distribution / packaging
 .Python
 build/
