@@ -36,4 +36,4 @@ class ModelPredictorConfig:
     def __init__(self):
         self.trained_model_path: str = os.path.join(ARTIFACTS_DIR, MODEL_TRAINER_ARTIFACTS_DIR, BEST_MODEL_DIR)
 
-        self.final_excel_file_path: str = os.path.join('../../../../output.xlsx')
+        self.final_excel_file_path: str = os.path.join(os.getcwd(), OUTPUT_FILE_NAME)

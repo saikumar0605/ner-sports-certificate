@@ -1,7 +1,9 @@
+import os
 import sys
 import spacy
 import logging
 import pandas as pd
+from src.constant import *
 from pandas import DataFrame
 from src.exception import NerException
 from src.entity.config_entity import ModelPredictorConfig
@@ -44,7 +46,7 @@ class ModelPredictor:
             logger.info("Entered the spacy_info_extraction method of Model predictor class")
 
             extracted_info = []
-            for desc in prediction_data_df['Certificate_Description']:
+            for desc in prediction_data_df['Certificate Description']:
                 doc = spacy_model(desc)
 
                 sports_name = None
@@ -104,6 +106,15 @@ class ModelPredictor:
             logger.info("Created a dataframe from the extracted information")
 
             result_df.to_excel(self.model_predictor_config.final_excel_file_path)
+            logger.info("Exited the initiate_model_predictor method of Model predictor class")
 
         except Exception as e:
             raise NerException(e, sys) from e
+        
+
+if __name__ == "__main__":
+    model_predictor = ModelPredictor()
+
+    prediction_file_path = os.path.join(DATA_DIRECTORY, DATA_FILE_NAME)
+    model_predictor.initiate_model_predictor(excel_file_path=prediction_file_path)
+    

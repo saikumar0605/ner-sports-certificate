@@ -12,7 +12,7 @@ The task is to develop a model that can read and extract these pieces of informa
 
 ## Solution proposed
 
-Since this is a task of Named Entity Recognition, 2 model have been used. To extract a person name, pre-trained BERT model has been used. To extract the Winning position, sports name and year of organization, spacy model has been used. 
+Since this is a task of Named Entity Recognition, 2 models have been used. To extract a person name, pre-trained BERT model has been used. To extract the Winning position, sports name and year of organization, spacy model has been used. 
 
 ## Dataset used
 The dataset has been provided with 300 certificates. The data has been manually extracted and is intended for training purposes.
@@ -47,13 +47,7 @@ Step 4. Rub the app.py file for training the model
 python app.py
 ```
 
-Step 5. For inferencing run the prediction_pipeline.py file. For this navigate to preidiction_pipeline.py file - 
-```
-cd src/pipeline/prediction_pipeline.py
-```
-
-And run the file
-
+Step 5. For inferencing run the prediction.py file. 
 ```bash
-python prediction_pipeline.py
+python prediction.py
 ```

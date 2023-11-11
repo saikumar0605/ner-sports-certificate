@@ -16,7 +16,7 @@ CONFIG_FILE_NAME = "config.cfg"
 CONFIG_FILE_DIR = "config"
 
 BEST_MODEL_DIR = "model-best"
-
+OUTPUT_FILE_NAME = "output.xlsx"
 
 APP_HOST = "0.0.0.0"
 PORT = 8080
