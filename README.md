@@ -29,12 +29,12 @@ The dataset has been provided with 300 certificates. The data has been manually 
 
 Step 1. Cloning the repository
 ```
-git clone https://github.com/Adityashinde1/ner-sports-task
+git clone https://github.com/saikumar0605/ner-sports-certificate
 ```
 
 Step 2. Create conda environment
 ```bash
-conda create -p env python==3.8 -y
+conda create -p env python==3.9 -y
 ```
 
 Step 3. Install necessary requirements
